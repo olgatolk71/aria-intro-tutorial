@@ -1,0 +1,17 @@
+*[role="heading"] {
+	font-weight: 700;
+	margin-top: 1.13em;
+}
+*[aria-level="1"] {
+	font-size: 250%;
+}
+*[aria-level="2"] {
+	font-size: 175%;
+}
+*[aria-level="3"] {
+	font-size: 150%;
+}
+*[role="link"] {
+	color: blue;
+	text-decoration: underline;
+}
