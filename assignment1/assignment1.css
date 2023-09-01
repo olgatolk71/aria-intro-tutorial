@@ -15,3 +15,29 @@
 	color: blue;
 	text-decoration: underline;
 }
+
+div[role="main"], main {
+	border-top: solid thin black;
+}
+
+.counter {
+	counter-reset: listing;
+}
+
+div[role="listitem"]:is(div[aria-setsize]):before {
+	counter-increment: listing;
+	content: counter(listing) ". ";
+}
+div[role="listitem"] { 
+	margin-left: 5em;
+}
+div[role="listitem"]:not([aria-setsize]) {
+	display: list-item;
+	list-style-type: circle;
+}
+
+div[role="contentinfo"], footer {
+	font-size: 85%;
+	padding: 1em;
+	border-top: solid thin black;
+}
