@@ -21,12 +21,12 @@ div[role="main"], main {
 }
 
 .counter {
-	counter-reset: listing;
+	counter-reset: olc;
 }
 
 div[role="listitem"]:is(div[aria-setsize]):before {
-	counter-increment: listing;
-	content: counter(listing) ". ";
+	counter-increment: olc;
+	content: counter(olc) ". ";
 }
 div[role="listitem"] { 
 	margin-left: 5em;

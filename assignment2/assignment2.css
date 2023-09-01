@@ -21,7 +21,7 @@ ol ol {
 	height: 8em;
 }
 
-main {
+div[role="main"], main {
 	border-top: solid thin black;
 }
 

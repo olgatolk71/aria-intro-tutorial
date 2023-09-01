@@ -1,0 +1,64 @@
+.tabList {
+	font-family: "Trebuchet MS",serif;
+	margin: 0;
+	padding: 0; /* 0 2em 0;*/
+	list-style-type: none;
+	/*border: thin solid red;
+	/*position: relative;
+	white-space:nowrap;
+	z-index:2;*/
+}
+.tabList li {
+	margin: 0;
+	padding: 0; 
+	display: inline;
+	position: relative;
+	z-index:1;
+	border: 1px solid black;
+	border-bottom: red;
+	color: #0000FF;
+	/*background-color: #DEEFFF;*/
+
+}
+li.selectedTab {
+	background-color: white;
+	color: black;
+	height: 105%;
+	z-index: 3;
+	/*border-bottom: thin solid white;
+	padding-bottom: 5px;*/
+}
+.tabBtn {
+	text-decoration:none;
+	color: black;
+	background-color: white;
+	border: none;
+}
+
+.panels {
+	border: thin solid black;
+	background-color: white;
+	position: relative;
+	z-index: 2;
+	margin-top: -1px;
+}
+.panels div {
+	padding: 1.13em;
+}
+
+.show {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+
+div[role="main"], main {
+	border-top: solid thin black;
+}
+
+footer {
+	font-size: 85%;
+	padding: 1em;
+	border-top: solid thin black;
+}
