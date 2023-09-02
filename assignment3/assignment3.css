@@ -1,38 +1,43 @@
 .tabList {
 	font-family: "Trebuchet MS",serif;
 	margin: 0;
-	padding: 0; /* 0 2em 0;*/
+	padding: 0;
 	list-style-type: none;
-	/*border: thin solid red;
-	/*position: relative;
-	white-space:nowrap;
-	z-index:2;*/
+	display: table;
 }
 .tabList li {
 	margin: 0;
-	padding: 0; 
-	display: inline;
+	padding: 0px; 
+	display: table-cell;
 	position: relative;
+	top: 0px;
 	z-index:1;
 	border: 1px solid black;
 	border-bottom: red;
 	color: #0000FF;
-	/*background-color: #DEEFFF;*/
+	overflow-y: visible;
 
 }
 li.selectedTab {
-	background-color: white;
+	background-color: #FFFFFF;
 	color: black;
-	height: 105%;
-	z-index: 3;
-	/*border-bottom: thin solid white;
-	padding-bottom: 5px;*/
+	z-index:3;
+}
+li.selectedTab button {
+	position: relative;
+	background-color: white;
 }
 .tabBtn {
+	position: relative;
 	text-decoration:none;
 	color: black;
 	background-color: white;
 	border: none;
+	z-index:1;
+}
+.tabBtn:focus, .tabBtn:focus-within, .tabBtn:active, .tabBtn:hover, .tabBtn:focus-visible, .tabBtn:target {
+	outline: none;
+	border-top: 2px solid blue;
 }
 
 .panels {

@@ -10,33 +10,20 @@
 		<header>
 			<h1>ARIA Assignment 3</h1>
 			<h2>What to do:</h2>
-			<ol>
-				<li>Examine this form and:
-					<ol>
-						<li>Find the accessibility problem with this form; and</li>
-						<li>Fix it using ARIA</li>
-					</ol>
-				</li>
-				<li>Modify the form so that when you click the Submit button:
-					<ol>
-						<li>You stay on this page</li>
-						<li>Your keyboard focus stays on the Submit button</li>
-						<li>Add the text from <a href="contacted.html">ARIA Assignment 2 - Comments Not Sent</a> page to this page, and expose it to assistive technology.  (ie:  implement a status message.)</li>
-					</ol>
-				</li>
-			</ol>
+			<p>Add the appropriate ARIA to make this tabbed interface accessible.</p>
 		</header>
 		<main>
+			<h2>Tabbed Interface</h2>
 			<p>All text here is from <a href="http://fillerama.io/" target="_blank" rel="noopener noreferrer">Fillerama</a>:</p>
 	
 			<div class="tabHolder">
 				<ul class="tabList">
 					<li class="selectedTab"><button id="adTabBtn" class="tabBtn">Arrested Development</button></li>
-					<li><button id="drWTabBtn" class="tabBtn">Doctor Who</button></li>
-					<li><button id="futuramaTabBtn" class="tabBtn">Futurama</button></li>
+					<li><button id="drWTabBtn" class="tabBtn" tabindex="-1">Doctor Who</button></li>
+					<li><button id="futuramaTabBtn" class="tabBtn" tabindex="-1">Futurama</button></li>
 				</ul>
 				<div class="panels">
-					<div id="adTabPanel">
+					<div id="adTabPanel" class="tabPanel">
 						<h2>I'm afraid I just blue myself.</h2>
 						<p>I'm half machine. I'm a monster. Well, what do you expect, mother? What's Spanish for "I know you speak English?" Marry me.</p>
 						<p>Across from where? I hear the jury's still out on science. <strong> It's called 'taking advantage.</strong> <em>' It's what gets you ahead in life.</em> Say goodbye to these, because it's the last time!</p>
@@ -56,7 +43,7 @@
 							<li>Get me a vodka rocks. And a piece of toast.</li>
 						</ul>
 					</div>
-					<div id="dwTabPanel" class="hidden">
+					<div id="drWTabPanel" class="hidden tabPanel">
 					<h2>They're not aliens, they're Earth…liens!</h2>
 						<p>It's a fez. I wear a fez now. Fezes are cool. I am the Doctor, and you are the Daleks! Stop talking, brain thinking. Hush. You've swallowed a planet! Aw, you're all Mr. Grumpy Face today.</p>
 						<p>I am the Doctor, and you are the Daleks! I'm the Doctor, I'm worse than everyone's aunt. *catches himself* And that is not how I'm introducing myself. You hate me; you want to kill me! <strong> Well, go on!</strong> <em> Kill me!</em> KILL ME!</p>
@@ -73,7 +60,7 @@
     							<li>Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</li>
 						</ul>
 					</div>
-					<div id="futTabPanel" class="hidden">
+					<div id="futuramaTabPanel" class="hidden tabPanel">
 						<h2>Daddy Bender, we're hungry.</h2>
 						<p>I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Oh sure! Blame the wizards! Calculon is gonna kill us and it's all everybody else's fault! Eeeee! Now say "nuclear wessels"!</p>
 						<p>Bender?! You stole the atom. No! I want to live! There are still too many things I don't own! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. <strong> Bender, hurry!</strong> <em> This fuel's expensive!</em> Also, we're dying!</p>
