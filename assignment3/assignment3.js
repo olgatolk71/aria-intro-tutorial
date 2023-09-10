@@ -3,8 +3,8 @@ let tabPanels = {};
 
 tabBtns = Array.from(document.querySelectorAll(".tabBtn"));
 for (let i =0 ; i < tabBtns.length; i++) {
-	tabBtns[i].addEventListener("click", exposeTab, false);
-	tabBtns[i].addEventListener("keyup", selectTab, false);
+	tabBtns[i].addEventListener("click", selectTab, false);
+	tabBtns[i].addEventListener("keyup", focusTab, false);
 }
 
 let x = document.querySelectorAll(".tabPanel");
@@ -12,15 +12,17 @@ for (let i =0 ; i < x.length; i++) {
 	tabPanels[x[i].id] = x[i];
 }
 
-function selectTab (e) {
+// If left (37) or right (39) arrow keys are pressed, change the focus on the tab buttons, but do not activate.
+function focusTab (e) {
 	if (e.keyCode == 39) {
 		tabBtns[(tabBtns.indexOf(e.target) + 1) % 3].focus();
 	} else if (e.keyCode == 37) {
 		tabBtns[((tabBtns.indexOf(e.target) - 1) < 0 ? 2 : tabBtns.indexOf(e.target) - 1)].focus();
 	}
-} // End of selecTab
+} // End of focusTab
 
-function exposeTab(e) {
+// If tab button is clicked (mouse, touch, Enter/Space) expose that tab's panel and hide the others
+function selectTab(e) {
 	let tabPanelID = e.target.id.replace("Btn", "Panel");
 
 	for (var i = 0; i < tabBtns.length; i++) {
@@ -34,5 +36,5 @@ function exposeTab(e) {
 			tabBtns[i].parentNode.classList.remove("selectedTab");
 		}
 	}
-} // End of exposeTab
+} // End of selectTab
 
