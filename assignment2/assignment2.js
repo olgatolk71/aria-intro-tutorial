@@ -20,6 +20,6 @@ function sendComments (e) {
 	// This is the message we want added to the aria live region
 	let msg = "Thank you for sending your comments. Your comments have already been thrown into the dustbin of the Interwebs, and will be ignored at once!"	;
 
-	// Now, add the code to insert the msg into the aria live region
+	//messageCentre.innerText = msg;  // Uncomment to add the msg text to the live region.
 	
 } // End of sendComments
