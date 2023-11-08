@@ -1,17 +1,21 @@
-*[role="heading"] {
+h1 {
 	font-weight: 700;
 	margin-top: 1.13em;
 }
-*[aria-level="1"] {
+
+h1, h2 {
 	font-size: 250%;
 }
-*[aria-level="2"] {
+
+h3 {
 	font-size: 175%;
 }
-*[aria-level="3"] {
+
+h4 {
 	font-size: 150%;
 }
-*[role="link"] {
+
+a {
 	color: blue;
 	text-decoration: underline;
 }
@@ -24,19 +28,21 @@ div[role="main"], main {
 	counter-reset: olc;
 }
 
-div[role="listitem"]:is(div[aria-setsize]):before {
+li:before {
 	counter-increment: olc;
 	content: counter(olc) ". ";
 }
-div[role="listitem"] { 
+
+li {
 	margin-left: 5em;
 }
-div[role="listitem"]:not([aria-setsize]) {
+
+li:not([aria-setsize]) {
 	display: list-item;
 	list-style-type: circle;
 }
 
-div[role="contentinfo"], footer {
+footer {
 	font-size: 85%;
 	padding: 1em;
 	border-top: solid thin black;
