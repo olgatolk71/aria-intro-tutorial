@@ -15,9 +15,7 @@ if (submitBtn) {
 }
 
 document.getElementById('submitBtn').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the form from submitting
-    // Add code to handle form submission, e.g., display the status message
-    // Keep focus on the Submit button
+    event.preventDefault(); 
     document.getElementById('submitBtn').focus();
  });
 
