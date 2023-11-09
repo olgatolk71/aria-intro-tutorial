@@ -20,7 +20,7 @@ a {
 	text-decoration: underline;
 }
 
-div[role="main"], main {
+main {
 	border-top: solid thin black;
 }
 
